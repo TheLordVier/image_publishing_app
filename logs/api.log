@@ -21,3 +21,5 @@
 2022-11-15 10:35:57,947 - [INFO] - api - (app.py).api_post(66) - api_post - > 6
 2022-11-15 10:37:32,021 - [INFO] - api - (app.py).api_main(55) - api_main - > 8
 2022-11-15 10:37:32,026 - [INFO] - api - (app.py).api_post(66) - api_post - > 8
+2022-11-15 12:03:05,281 - [INFO] - api - (app.py).api_main(55) - api_main - > 8
+2022-11-15 12:03:05,285 - [INFO] - api - (app.py).api_post(66) - api_post - > 8
