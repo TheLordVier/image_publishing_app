@@ -1,0 +1,10 @@
+[Unit]
+Description=Flask app service with HTML and CSS
+After=network.target
+
+[Service]
+WorkingDirectory=/home/amikhaylov/skypro-homework-25
+ExecStart=/home/amikhaylov/skypro-homework-25/venv/bin/python app.py
+
+[Install]
+WantedBy=multi-user.target
