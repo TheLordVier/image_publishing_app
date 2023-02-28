@@ -1,0 +1,6 @@
+venv/
+.mypy_cashe/
+.pytest_cache/
+flask-app.service
+mypy.ini
+

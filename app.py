@@ -5,14 +5,27 @@ import logger
 
 # Импортируем функции из utils.py, которые будем использовать
 from utils import *
-
+# Импортируем конфигурацию из файла config.py
+from config import Config
+from db import db
 
 # Создаём логгер для дальнейшей работы с ним
 log = logger.get_logger("api")
 
 
 # Инициализируем приложение
-app = Flask(__name__)
+# app = Flask(__name__)
+# app.config.from_object(config)
+# db.init_app(app)
+
+def create_app(config) -> Flask:
+    app = Flask(__name__)
+    app.config.from_object(config)
+    db.init_app(app)
+    return app
+
+
+app: Flask = create_app(Config)
 
 
 @app.route("/")
@@ -84,5 +97,16 @@ def page_not_found(e):
     return "Приносим наши извинения, произошла внутренняя ошибка сервера. Ошибка - 500"
 
 
+@app.route("/test_db", methods=["GET"])
+def db_page():
+    result = db.session.execute(
+       '''
+       SELECT 1;
+       '''
+    ).scalar()
+    return jsonify({'result': result})
+
+
 if __name__ == '__main__':
+    # app.run(host='0.0.0.0', port=8080)
     app.run(host='0.0.0.0', port=8080)
