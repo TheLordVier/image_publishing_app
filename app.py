@@ -13,11 +13,6 @@ from db import db
 log = logger.get_logger("api")
 
 
-# Инициализируем приложение
-# app = Flask(__name__)
-# app.config.from_object(config)
-# db.init_app(app)
-
 def create_app(config) -> Flask:
     app = Flask(__name__)
     app.config.from_object(config)
