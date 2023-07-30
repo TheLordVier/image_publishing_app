@@ -27,7 +27,7 @@ Project developed by: Mikhailov Alexander
 
 --- 
 
- **The application implements the following features:**:
+ **The application implements the following features:**
  - Home page with loading of all posts from JSON file
  - Single post page with detailed content and comments to it
  - Keyword search page
